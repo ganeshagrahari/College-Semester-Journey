@@ -1,0 +1,104 @@
+1--------->DATABASE COMMANDS:--------
+Show databases : show dbs
+create new db and switch to  it: use db_name
+
+know current db : db
+
+delete database: db.dropDatabase()
+
+2-------------->COLLECTION COMMANDS:---
+seeing collections:show collections
+create new collection name 'Students': db.craeteCollection('Students')
+delete a collection : db.collection_name.drop
+
+
+3---------->insert a new rows in collection:
+INSERT ONE:
+db.Students.insert({
+    "name":"Ganesh Agrahari",
+    "Course":"BCA DS&AI",
+    "City":"Lucknow"
+})
+INSERT MANY:
+db.BBD.insertMany([
+    {
+        "name":"Vishul",
+        "Class":12,
+        "Rollno":1230258176
+
+    },
+    {
+        "name":"kallu",
+        "Class":85,
+        "Rollno":1230258178,
+        "car":"Innova"
+
+
+    },
+    {
+        "name":"HArry",
+        "Class":12,
+        "Rollno":1230258177,
+        "H":"P"
+
+    },
+    {
+        "name":"Honey",
+        "CH":"BigD",
+        "Dep":"SOCA"
+    }
+    
+])
+
+
+4---------->FIND:
+db.collection_name.find():-showe all rows in collection
+limiting result of this :
+db.collection_name.find().limit(2)
+
+db.collection_name.find({"name":"Honey"})
+
+5----------->Count the number of output  
+db.collection_name.find().count()
+
+db.collection_name.find({"name":"Honey"}).count()
+
+db.collection_name.find().sort({member_since:1})---Accending order
+db.collection_name.find().sort({member_since:-1})---Deccending order
+
+
+FINDONE:  find the first row result then this method stop searching further
+db.collection_name.findOne({"Name":"Honey"})
+
+
+6---------->UPDATE
+db.BBD.update({"name":"Honey"},{
+        "name":"Honey",
+        "CH":"c++",
+
+        "Dep":"SOCA"
+    })
+
+7----------------->Indexing
+db.collection_name_createIndex({field:1})
+
+8------------------>CRUD Operations:
+ i>CREATE (Add data) :db.collection_name.inserOne({name:"Ganesh"})
+ ii>READ(fetch data) : db.collection_name.find({name:"Ganesh"})
+ iii>Update (Modify data) : db.collection_name.updateOne({{name:"Ganesh"},{$set: {age:21}})
+ iv>Delete (Remove data) : db.collection_name.deleteOne({name :"Ganesh"})
+
+
+9------------------->Aggregation :---(Grouping data items in one or more collections.
+db.collection_name.aggregate([{$match:{category:"electronics"}},
+                              {$group: {_id:null,totalsales:{$sum:"$amount"}}])
+
+
+10--------------------------------->(Cursor Methods)
+   i>next:
+      cursor=db.collection_name.find()
+      document=cursor.next()
+      print(document)
+
+   ii>
+       db.collection_name.find().foreach(doc => printJson(doc))
