@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 *********************************************
@@ -23,3 +24,30 @@ unit-2
 4. crud operation in mongodb
 
 *********************************************
+=======
+
+
+*********************************************
+unit-1
+
+1. NoSQL
+2. Advantage and disadvantage of NoSQL
+3. difference between sql and NoSQL
+4. horizontal and vertical scaling
+5. feature of NoSQL
+6.data model in NoSQL.
+
+*********************************************
+
+
+
+*********************************************
+unit-2
+
+1. what is mongodb
+2. data model design in NoSQL
+3. Cap theorem in NoSQL
+4. crud operation in mongodb
+
+*********************************************
+>>>>>>> dc4cba81a1c391062d7063dbe308d4162a8a9149
