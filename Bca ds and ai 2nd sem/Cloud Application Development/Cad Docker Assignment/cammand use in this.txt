@@ -1,0 +1,3 @@
+1{for creating dockerimage}):docker build -t <name of your image> .      
+2{for running that image file}):docker run myfirstapp
+3{for running that image file with specific countainer's name}):docker run --name <name for your new countainer> myfirstapp 

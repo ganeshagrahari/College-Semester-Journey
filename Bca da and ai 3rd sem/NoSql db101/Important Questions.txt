@@ -1,0 +1,21 @@
+Important questions NoSql
+1. Explain different Data models in nosql
+2. Explain Data model design in nosql
+3. Explain cap theorem
+4. Explain Vertical and horizontal scaling
+5. Crud operation 
+6. Indexing
+7. Aggregation
+8. Cursor method
+9. Logical operator
+10. Comparison operator
+11. Enclusion and inclusion
+12. Find and findone
+13. Update and updateone 
+14. Explain map reduce and parallel processing 
+15. Query in an array
+16. Query in an embedded(nested data) data model.
+17. Big data 
+18. Delete and deleteone 
+19. Why nosql
+20. Advantages and disadvantages of nosql
